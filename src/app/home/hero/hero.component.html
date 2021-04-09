@@ -1,7 +1,7 @@
 <br>
 <div class="container">
   <app-load *ngIf="loadin"></app-load>
-  <div class="img-btn left" style="transform: translateX(20px)" (click)=prev() [ngClass]="lefdisable?'disable':'none'"><</div>
+  <div class="img-btn left" *ngIf="!loadin" style="transform: translateX(20px)" (click)=prev() [ngClass]="lefdisable?'disable':'none'"><</div>
   <div class="main-cont" (click)="Article()" *ngIf="!loadin">
     <img [src]="imageval" alt="" class="Hero-image"/>
     <div class="art-head">
@@ -13,6 +13,7 @@
   </div>
   <div 
   class="img-btn"
+  *ngIf="!loadin"
   style="transform: translateX(-20px)"
   (click)=next() [ngClass]="disable?'disable':'none'">></div>
 </div>
