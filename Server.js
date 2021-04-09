@@ -5,7 +5,7 @@ const app=require('./Backend/app')
 const server=http.createServer(app)
 
 
-app.set('port',80);
-server.listen(80,()=>{
+app.set('port',1024);
+server.listen(1024,()=>{
     console.log("Server is listening at 80")
 })
