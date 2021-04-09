@@ -3,8 +3,8 @@ const mongoose = require("mongoose");
 const app = express();
 const path=require("path")
 const bodyParser = require("body-parser");
-const user=require('./routes/User');
-const article=require("./routes/Article")
+const user=require(__dirname+'/routes/User');
+const article=require(__dirname+"/routes/Article")
 
 app.use(bodyParser.json());
 
