@@ -1,0 +1,49 @@
+.Article-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.row{
+    width: 80%;
+}
+
+.Article-image img{
+    width:1520px
+}
+
+.Article-title{
+    margin-top: 60px;
+    font-size: 40px;
+}
+
+.Article-desc{
+    font-size: 20px;
+}
+
+.Article-desc p{
+    white-space: pre-wrap;
+}
+
+.Article-author{
+    margin-top: 40px;
+    float: right;
+    font-style: italic;
+    text-align: right;
+    color: gray;
+}
+
+@media (max-width:375px) {
+    .Article-image img{
+        width:350px
+    }
+
+    .row{
+        width: 94%;
+    }
+
+    .Article-title{
+        margin-top: 60px;
+        font-size: 30px;
+    }
+}

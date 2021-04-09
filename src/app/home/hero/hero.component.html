@@ -1,0 +1,18 @@
+<br>
+<div class="container">
+  <app-load *ngIf="loadin"></app-load>
+  <div class="img-btn left" style="transform: translateX(20px)" (click)=prev() [ngClass]="lefdisable?'disable':'none'"><</div>
+  <div class="main-cont" (click)="Article()" *ngIf="!loadin">
+    <img [src]="imageval" alt="" class="Hero-image"/>
+    <div class="art-head">
+      <h2 style="text-align: center;">{{title}}</h2>
+      <p>
+        {{desc}}
+      </p>
+    </div>
+  </div>
+  <div 
+  class="img-btn"
+  style="transform: translateX(-20px)"
+  (click)=next() [ngClass]="disable?'disable':'none'">></div>
+</div>

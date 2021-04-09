@@ -1,0 +1,165 @@
+
+.hero-image img{
+    width: 750px;
+    height: auto;
+}
+
+.hero-image{
+    padding: 180px;
+    padding-left: 250px;
+    animation: load 1s ease-in-out 1;
+}
+
+.hero-head{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 3%;
+    margin-top: 2%;
+}
+
+@keyframes load{
+    0%{
+        opacity: 0%;
+        transform: translateY(-10px);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateY(0px);
+    }
+}
+
+.hero-content h3{
+    font-size: 40px;
+    margin: 0px;
+}
+
+.hero-content p{
+    margin-top: 30px;
+    line-height: 28px;
+}
+
+@keyframes textload{
+    0%{
+        transform: translateX(-35px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+.hero-content{
+    padding: 140px;
+    padding-right: 220px;
+    margin-top: 6%;
+    animation: textload 1s ease-in-out 1;
+}
+
+.btn{
+    margin-top: 20px;
+    cursor: pointer;
+    background: rgb(30, 99, 228);
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    width: 150px;
+    padding:10px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    color: rgb(212, 212, 212);
+}
+
+.btn:hover{
+    background: rgb(24, 82, 189);
+}
+
+
+
+.btn:active{
+    background: rgb(15, 53, 124);
+}
+
+.head-recent{
+    position: relative;
+    font-weight:600;
+    font-size: 45px;
+    text-align: center;
+}
+
+.head-recent p{
+    margin-bottom: 10px;
+}
+
+.head-recent::after{
+    display: block;
+    margin: 0px auto;
+    text-align: center;
+    justify-content: center;
+    content: '';
+    width: 10%;
+    height: 2px;
+    background-color: crimson;
+    margin-bottom: 40px;
+    animation: enlarge 1s ease-in-out 1;
+}
+
+@keyframes enlarge{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@media (max-width:375px){
+    .hero-image img{
+        width:350px;
+    }
+
+    .hero-image{
+        display: flex;
+    justify-content: center;
+    }
+
+    
+    
+    .hero-head{
+        display: block;
+    }
+
+    .head-recent{
+        position: relative;
+        font-weight:600;
+        font-size: 25px;
+        text-align: center;
+    }
+    
+    .hero-image{
+        padding: 0px;
+    }
+
+    .hero-content h3{
+        font-size: 30px;
+        margin: 0px;
+    }
+    
+    .hero-content p{
+        margin-top: 30px;
+        line-height: 28px;
+    }
+    
+    .hero-content{
+        padding: 20px;
+        margin-top: 1%;
+    }
+
+    .head-recent::after{
+        width:31%
+      }
+
+    .btn{
+        width: 100% !important;
+    }
+}

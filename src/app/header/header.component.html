@@ -1,0 +1,42 @@
+  <!-- <div class="bar"></div>
+  <div class="bar"></div> -->
+  <div class="backdrop" [ngClass]="toggle?'menu':'none'" (click)=harmburger()></div>
+  <img src="../assets/logo.png" class="logo" routerLink="">
+  <div class="close-menu nav-close" style="margin-bottom: 20px;cursor: pointer;" (click)="harmburger()" [ngClass]="toggle?'open':'none'">
+    <div class="bar" id="bar1" [ngClass]="toggle?'openbar':'none'"></div>
+    <div class="bar" id="bar2" [ngClass]="toggle?'openbar':'none'"></div>
+  </div>
+
+<div class="navbar" [ngClass]="toggle?'close':'none'">
+  <ul class="navbar-menu">
+    <li class="nav-link"
+    routerLink="/" routerLinkActive='active'
+    [routerLinkActiveOptions]="{exact:true}"
+    >Home</li>
+    <li class="nav-link" routerLink="explore" routerLinkActive='active'>Explore</li>
+    <li class="nav-link" routerLink="about" routerLinkActive='active'>About</li>
+    <li class="nav-link" routerLink="Auth" routerLinkActive='active' *ngIf="!islogin">Login</li>
+    <li class="nav-link" *ngIf="islogin" (click)="showmenu()">{{Username}}</li>
+  </ul>
+  <div class="option-container" *ngIf="islogin" [ngClass]="menu?'none':'menu'">
+    <ul class="option-menu">
+      <div class="close-menu" style="margin-bottom: 20px;cursor: pointer;" (click)="showmenu()">
+      <div class="bar" id="bar1">
+    </div>
+      <div class="bar" id="bar2">
+      </div>
+      </div>
+
+      <li class="option-item">Profile</li>
+      <li class="option-item" routerLink="Manage">Manage post</li>
+      <li class="option-item" routerLink="Dash">Add post</li>
+      <li class="option-item" (click)="logout()">Logout</li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="btn-container" routerLink="Dash" routerLinkActive='hide' *ngIf="Username">
+    <p>+</p>
+</div>
+

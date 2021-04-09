@@ -1,0 +1,45 @@
+<br />
+<div class="divider"></div>
+<br />
+
+<div class="container" *ngFor="let a of article">
+  <app-load *ngIf="loadin"></app-load>
+  <div class="card" (click)="Article(a._id)" *ngIf="!loadin">
+    <div class="image">
+      <img [src]="a.image" alt="" />
+    </div>
+    <div class="detail">
+      <div class="art-head">
+        <h2>{{a.title}}</h2>
+        <p>
+         {{a.desc}}
+        </p>
+      </div>
+      <div class="Author">
+        <p>{{a.author}}</p>
+        <p>{{a.time}}</p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+<!-- <div class="container">
+  <div class="card">
+    <div class="image">
+      <img [src]="imgval" alt="" />
+    </div>
+    <div class="detail">
+      <div class="art-head">
+        <h2>This is the tititle</h2>
+        <p>
+          Smal brief here plesase thoda sa aur brief dalna padega idhar for
+          aesthithic ke liye
+        </p>
+      </div>
+      <div class="Author">
+        <p>By-Sahil patel Date:14/06/2021</p>
+      </div>
+    </div>
+  </div>
+</div> -->
+

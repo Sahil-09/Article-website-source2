@@ -1,0 +1,31 @@
+<div class="form-container">
+    <div class="form-row">
+        
+    <form [formGroup]="ArticleForm" (ngSubmit)="onSubmit(ArticleForm)">
+        <h1>Add new article</h1>
+
+        <input type="text" 
+        name="title" 
+        id="title" 
+        class="form-control" 
+        placeholder="Enter title here"
+        formControlName="title"
+        #title>
+
+        <img [src]="imageval" alt="" style="width:600px"><br>
+
+        <button class="btn pickimage" (click)="imagepick.click()" type=button>Pick image</button>
+        
+        <input type="file" name="image" id="image" #imagepick (change)="filepick($event)"><br>
+        
+        <textarea name="desc" id="desc" cols="30" rows="10" 
+        class="form-control form-text" placeholder="Enter description here" formControlName="desc"
+        #desc ></textarea><br>
+        <div class="btn-container">
+        <button class="btn" type="submit">Submit</button>
+        <button class="btn reset" type="button" (click)="reset()">Clear</button>
+        </div>
+    </form>
+</div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,89 @@
+<br>
+
+
+<div class="form-container" *ngIf="Loginswitch">
+    <div class="form-row">
+        
+    <form #form="ngForm" (ngSubmit)="Login(form)">
+        <div class="art-headin">
+            <h2>Welcome to Blog-website</h2>
+            <p>Please login here</p>
+        </div>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your mail" ngModel=#email ngModel>
+        <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password" ngModel=#password ngModel><br>
+        <button class="btn" type="submit">Login</button> | Not a member? <a class="signup-link" (click)="signupswitch()">Sigup here</a>
+    </form>
+    </div>
+</div>
+
+
+
+<div class="form-container" *ngIf="!Loginswitch">
+    <div class="form-row">   
+    <form #form="ngForm" (ngSubmit)="Signup(form)">
+        <div class="art-headin">
+            <h2>Welcome to Blog-website</h2>
+            <p>Please Sign-up here</p>
+        </div>
+
+        <input 
+        type="text" 
+        name="name" 
+        id="name"
+        class="form-control signup" 
+        placeholder="Enter your Full-name" 
+        ngModel=#email ngModel>
+
+        <div class="form-gender">
+            <span>&nbsp;Please select you gender </span><br>
+        <label for="Gender">
+        <input 
+        type="radio" 
+        name="Gender" 
+        id="male" 
+        value="Male" 
+        placeholder="Enter your email" 
+        ngModel=#radio ngModel>Male</label>
+
+        <label for="Gender">
+        <input 
+        type="radio" 
+        name="Gender" 
+        id="female" 
+        value="Female" 
+        placeholder="Enter your email" 
+        ngModel=#radio ngModel>Female</label>
+        </div><br>
+
+        <input 
+        type="email" 
+        name="email" 
+        id="email" 
+        class="form-control signup" 
+        placeholder="Enter your mail" 
+        ngModel=#email ngModel>
+
+        <input 
+        type="password" 
+        name="password" 
+        id="password" 
+        class="form-control signup" 
+        placeholder="Enter your password" 
+        ngModel=#password ngModel>
+
+        <input type="password" 
+        name="password" 
+        id="cpassword" 
+        class="form-control signup" 
+        placeholder="Confirm your password" 
+        ngModel=#password ngModel><br>
+
+        <button class="btn" type="submit">Signup</button> 
+        | Already a member? 
+        <a class="signup-link" (click)="LoginSwitch()">Login here</a>
+
+    </form>
+    </div>
+</div>
+
+<app-footer></app-footer>

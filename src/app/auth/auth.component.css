@@ -1,0 +1,172 @@
+.form-control{
+    background: none;
+    outline: none;
+    border:none;
+    border-bottom:1px solid rgb(255, 255, 255);
+    margin-bottom: 30px;
+    width: 94%;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.7s ease-in-out;
+    padding-bottom: 10px;
+    color: rgb(219, 219, 219);
+}
+
+input:-webkit-autofill{
+    -webkit-text-fill-color: rgb(224, 224, 224);
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.form-control:focus{
+    border-bottom:1px solid crimson
+}
+
+form{
+    margin-top: 80px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(11, 4, 27);
+    padding:80px;
+    border-bottom: 2px solid crimson;
+    margin-bottom: 80px;
+}
+
+.btn{
+    cursor: pointer;
+    background: crimson;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(212, 212, 212);
+}
+
+.signup-link{
+    cursor: pointer;
+    color:crimson
+}
+.signup-link:hover{
+    color:rgb(189, 18, 52)
+}
+
+.btn:hover{
+    background: rgb(163, 3, 35);
+}
+
+
+
+.btn:active{
+    background: rgb(116, 12, 33);
+}
+
+.art-headin{
+    margin-bottom: 60px;
+}
+
+.form-row{
+    width: 31%;
+}
+
+.form-gender{
+    text-align: left;
+    margin-bottom: 20px;
+}
+.form-gender input{
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+.form-gender label{
+    margin-right: 10px;
+}
+
+.form-container{
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup{
+    margin-bottom: 60px;
+}
+
+@media (width:1366px){
+    form{
+        font-size:14px ;
+        padding: 80px;
+        margin-bottom: 40%;
+    }
+    .form-control{
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .art-headin{
+        margin-bottom: 50px;
+    }
+    .form-row{
+        width: 50%;
+    }
+
+    .btn{
+        width: 60px;
+        height: 30px;
+        font-size: 14px;
+    }
+}
+
+
+@media (width:1024px){
+    form{
+        font-size:12px ;
+        padding: 80px;
+        margin-bottom: 40%;
+    }
+    .form-control{
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .art-headin{
+        margin-bottom: 50px;
+    }
+    .form-row{
+        width: 45%;
+    }
+
+    .btn{
+        width: 60px;
+        height: 30px;
+        font-size: 14px;
+    }
+}
+
+@media (width:375px){
+    form{
+        font-size:8px ;
+        padding: 24px;
+        margin-bottom: 60%;
+    }
+    .form-control{
+        font-size: 12px;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    
+
+    .art-headin{
+        margin-bottom: 40px;
+    }
+    .form-row{
+        width: 90%;
+    }
+
+    .btn{
+        width: 60px;
+        height: 20px;
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,8 @@
+<div class="Article-container">
+<div *ngFor="let a of Article" class="row">
+    <div class="Article-title"><h2>{{a.title}}</h2></div>
+    <div class="Article-image"><img [src]=a.image alt="{{a.title}}"></div>
+    <div class="Article-desc"><p>{{a.desc}}</p></div>
+    <div class="Article-author"><p>-{{a.author}}</p><p>{{a.time}}</p></div>
+</div>
+</div>

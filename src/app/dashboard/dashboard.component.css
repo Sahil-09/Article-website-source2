@@ -1,0 +1,150 @@
+.form-control{
+    background: none;
+    outline: none;
+    border:none;
+    border-bottom:1px solid rgb(255, 255, 255);
+    margin-bottom: 60px;
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.7s ease-in-out;
+    padding-bottom: 20px;
+    color: rgb(219, 219, 219);
+}
+
+form h1{
+    font-size: 45px;
+    font-weight: 400;
+    text-align: center;
+}
+
+form h1::after{
+    content: "";
+    display: block;
+    width:40%;
+    height: 2px;
+    background-color: crimson;
+    margin: 0px auto;
+    margin-top: 10px;
+    margin-bottom:15px;
+}
+
+.form-control:focus{
+    border-color: crimson
+}
+
+.btn{
+    cursor: pointer;
+    background: rgb(20, 130, 220);
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    color: rgb(212, 212, 212);
+    margin-bottom: 60px;
+}
+
+.reset{
+    background: rgb(220, 20, 47);
+    margin-left: 40px;
+}
+
+.reset:hover{
+    background: rgb(160, 15, 34) !important;
+}
+
+.pickimage{
+    width: 100%;
+    background: rgb(114, 114, 114);
+}
+
+.pickimage:hover{
+    background: rgb(61, 61, 61) !important;
+}
+
+form{
+    justify-content: center;
+    align-items: center;
+    padding:80px;
+}
+
+.form-text{
+    padding: 20px;
+    font-size: 16px;
+    resize: none;
+    border: 1px solid white;
+    width: 93%;
+}
+
+.form-row{
+    width: 41%;
+}
+
+input:-webkit-autofill{
+    -webkit-text-fill-color: rgb(224, 224, 224);
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.form-container{
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#image{
+    visibility: hidden;
+}
+
+.btn:hover{
+    background: rgb(18, 103, 173);
+}
+
+
+
+.btn:active{
+    background: rgb(11, 73, 124);
+}
+
+.btn-container{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (width:375px){
+    form h1{
+        font-size: 35px;
+    }
+
+    form h1::after{
+        content: "";
+        display: block;
+        width:40%;
+        height: 2px;
+        background-color: crimson;
+        margin: 0px auto;
+        margin-top: 10px;
+        margin-bottom:15px;
+    }
+
+    .form-control{
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .btn{
+        margin-bottom: 30px;
+    }
+
+    .form-row{
+        width:100%
+    }
+
+    form{
+        padding: 20px;
+    }
+}

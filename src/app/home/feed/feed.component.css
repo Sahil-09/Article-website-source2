@@ -1,0 +1,117 @@
+.divider{
+    content: '';
+    width: 40%;
+    height: 2px;
+    background-color: crimson;
+    margin:0 auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.art-head p{
+    display: -webkit-box;
+    -webkit-line-clamp:3;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+}
+.card{
+    cursor: pointer;
+    align-content: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background-color: #110433;
+    width: 73%;
+    transition: all 0.7s ease-in-out;
+}
+.card:hover{
+    transform: scale(1.01); 
+}
+.image img{
+    width: 423px;
+    text-justify: center;
+    /* display: block; */
+    
+}
+
+.image{
+    display: flex;
+    width: 330px;
+    /* height: 219px; */
+    /* overflow: hidden; */
+    justify-items: center;
+}
+
+.container{
+    margin: 0px;
+    margin-top: 40px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail{
+    display: grid;
+    padding:13px;
+    grid-template-rows: 80% 20%;
+}
+
+.Author{
+   justify-content: right;
+   align-items: center;
+   text-align: right;
+   margin-right: 20px;
+}
+
+.Author p{
+    font-size: 12px;
+    font-style: italic;
+    color: rgb(155, 155, 155);
+}
+
+.art-head{
+    padding: 20px;
+}
+
+.art-head h2:hover{
+    color:crimson
+}
+
+@media (max-width:375px) {
+    .card{
+        display: block;
+    }
+
+    .detail{
+        padding: 10px;
+        grid-template-rows: 70% 30%;
+    }
+
+    .image img{
+        width: 273px;
+        text-justify: center;
+        /* display: block; */ 
+    }
+    .art-head{
+        padding: 0px;
+    }
+    .art-head p{
+        font-size: 10px;
+    }
+
+    .Author p{
+        font-size: 8px;
+    }
+
+    .Author{
+        margin: 0px;
+    }
+    .image{
+        width:273px
+    }
+
+    .art-head h2{
+        font-size: 16px;
+    }
+}
