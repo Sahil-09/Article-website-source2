@@ -26,6 +26,8 @@ app.use((req, res, next) => {
 
 mongoose.connect("mongodb+srv://sahil:HTuU7ciTowPk08cs@cluster0.0hdw3.mongodb.net/Articlewebsite?retryWrites=true&w=majority").then(() => {
   console.log("Connected successfully!");
+}).catch(()=>{
+  console.log("Failed to connect")
 })
 
 
