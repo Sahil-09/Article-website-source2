@@ -43,6 +43,7 @@ export class HeaderComponent implements OnInit {
   }
 
   logout(){
+    this.showmenu()
     this.Authser.Logout()
     this.showmenu()
     this.Username=null

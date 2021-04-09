@@ -28,8 +28,8 @@
       </div>
 
       <li class="option-item">Profile</li>
-      <li class="option-item" routerLink="Manage">Manage post</li>
-      <li class="option-item" routerLink="Dash">Add post</li>
+      <li class="option-item" routerLink="Manage" (click)="showmenu()">Manage post</li>
+      <li class="option-item" routerLink="Dash" (click)="showmenu()">Add post</li>
       <li class="option-item" (click)="logout()">Logout</li>
     </ul>
   </div>
