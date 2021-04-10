@@ -3,8 +3,8 @@ const mongoose = require("mongoose");
 const app = express();
 const path=require("path")
 const bodyParser = require("body-parser");
-const user=require(__dirname+'/routes/User');
-const article=require(__dirname+"/routes/Article")
+const user=require('./routes');
+const article=require("./routes/Article")
 
 app.use(bodyParser.json());
 
@@ -31,9 +31,13 @@ mongoose.connect("mongodb+srv://sahil:HTuU7ciTowPk08cs@cluster0.0hdw3.mongodb.ne
 })
 
 
-app.use('/api/user',user);
+app.use('/api/user',user).catch(()=>{
+  console.log("unable to connec")
+});
 
-app.use('/api/article',article);
+app.use('/api/article',article).catch(()=>{
+  console.log("unable to connec")
+});;
 
 app.use((req,res,next)=>{
   res.sendFile(path.join(__dirname,"angular","index.html"))
