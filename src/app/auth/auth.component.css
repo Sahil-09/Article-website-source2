@@ -144,7 +144,7 @@ form{
     }
 }
 
-@media (width:375px){
+@media screen and (width:375px){
     form{
         font-size:8px ;
         padding: 24px;

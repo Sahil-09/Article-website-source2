@@ -33,7 +33,7 @@
     color: gray;
 }
 
-@media (max-width:375px) {
+@media screen and (max-width:375px) {
     .Article-image img{
         width:350px
     }

@@ -113,7 +113,7 @@
     }
 }
 
-@media (max-width:375px){
+@media screen and (max-width:375px){
     .hero-image img{
         width:350px;
     }
@@ -162,4 +162,8 @@
     .btn{
         width: 100% !important;
     }
+}
+
+@media screen and (max-width:375px){
+
 }

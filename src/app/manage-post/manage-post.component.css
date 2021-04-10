@@ -82,7 +82,7 @@ display: -webkit-box;
     justify-content: center;
 }
 
-@media (max-width:375px){
+@media  screen and (max-width:375px){
     .article{
         display: block;
         width: 80%;
