@@ -1279,12 +1279,12 @@ class AuthService {
         this.islogin = false;
     }
     Signup(data) {
-        this.http.post("http://localhost/api/user/signup", data).subscribe(() => {
+        this.http.post("http://localhost:3000/api/user/signup", data).subscribe(() => {
             console.log("submitted!");
         });
     }
     Login(data) {
-        this.http.post("http://localhost/api/user/login", data).subscribe(data => {
+        this.http.post("http://localhost:3000/api/user/login", data).subscribe(data => {
             if (data.token) {
                 this.token.next(data.token);
                 this.islogin = true;
@@ -1354,30 +1354,30 @@ class PostService {
         this.router = router;
     }
     createpost(data) {
-        this.http.post('http://localhost/api/article/create', data).subscribe((data) => {
+        this.http.post('http://localhost:3000/api/article/create', data).subscribe((data) => {
             this.router.navigate(["/explore"]);
         });
     }
     updatepost(data, id) {
-        this.http.patch("http://localhost/api/article/update/" + id, data).subscribe((data) => {
+        this.http.patch("http://localhost:3000/api/article/update/" + id, data).subscribe((data) => {
             console.log(data);
             this.router.navigate(["/explore"]);
         });
     }
     getposts() {
-        return this.http.get("http://localhost/api/article/get").pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_0__["tap"])(data => {
+        return this.http.get("http://localhost:3000/api/article/get").pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_0__["tap"])(data => {
             this.articles = data;
             console.log(this.articles);
         }));
     }
     getpost(i) {
-        return this.http.get("http://localhost/api/article/get/" + i);
+        return this.http.get("http://localhost:3000/api/article/get/" + i);
     }
     getmanagepost() {
-        return this.http.get("http://localhost/api/article/manage");
+        return this.http.get("http://localhost:3000/api/article/manage");
     }
     deletepost(id) {
-        return this.http.delete("http://localhost/api/article/delete/" + id);
+        return this.http.delete("http://localhost:3000/api/article/delete/" + id);
     }
 }
 PostService.ɵfac = function PostService_Factory(t) { return new (t || PostService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"])); };
