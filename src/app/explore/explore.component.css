@@ -76,7 +76,7 @@
     margin-bottom: 16%;
 }
 
-@media screen and (width:360px){
+@media only screen and (width:360px){
 
     .exp-row{
     display: grid;

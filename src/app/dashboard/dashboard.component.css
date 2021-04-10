@@ -115,7 +115,7 @@ input:-webkit-autofill{
     text-align: center;
 }
 
-@media screen and (width:360px){
+@media only screen and (width:360px){
     form h1{
         font-size: 35px;
     }
