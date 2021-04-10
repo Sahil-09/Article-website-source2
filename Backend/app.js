@@ -31,13 +31,9 @@ mongoose.connect("mongodb+srv://sahil:HTuU7ciTowPk08cs@cluster0.0hdw3.mongodb.ne
 })
 
 
-app.use('/api/user',user).catch(()=>{
-  console.log("unable to connec")
-});
+app.use('/api/user',user)
 
-app.use('/api/article',article).catch(()=>{
-  console.log("unable to connec")
-});;
+app.use('/api/article',article)
 
 app.use((req,res,next)=>{
   res.sendFile(path.join(__dirname,"angular","index.html"))
