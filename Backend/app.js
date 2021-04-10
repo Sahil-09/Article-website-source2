@@ -9,7 +9,7 @@ const article=require("./routes/Article")
 app.use(bodyParser.json());
 
 app.use("/image",express.static(path.join(__dirname,"image")))
-// app.use("/",express.static(path.join(__dirname,"angular")))
+app.use("/",express.static(path.join(__dirname,"angular")))
 
 app.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -35,7 +35,7 @@ app.use('/api/user',user)
 
 app.use('/api/article',article)
 
-// app.use((req,res,next)=>{
-//   res.sendFile(path.join(__dirname,"angular","index.html"))
-// })
+app.use((req,res,next)=>{
+  res.sendFile(path.join(__dirname,"angular","index.html"))
+})
 module.exports = app;
