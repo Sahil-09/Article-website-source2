@@ -154,7 +154,7 @@ h2{
   }
 }
 
-@media  screen and (max-width:375px){
+@media  screen and (max-width:360px){
   .Hero-image{
     width: 320px;
   }

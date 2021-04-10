@@ -38,7 +38,7 @@ li{
     cursor: pointer;
 }
 
-@media (width:375px){
+@media (width:360px){
     footer{
         font-size: 10px;
     }
