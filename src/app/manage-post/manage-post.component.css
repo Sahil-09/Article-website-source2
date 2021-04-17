@@ -6,8 +6,24 @@
     width: 55%;
     background-color: #0d042f;
     margin-top: 3%;
+    animation: onload 0.7s ease-in-out 1;
 }
 
+@keyframes onload{
+    0%{
+        transform: translateX(-60px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+app-load{
+    margin: 0 auto;
+    margin-bottom: 18%;
+}
 .manage-row{
     display: flex;
     flex-direction: column;

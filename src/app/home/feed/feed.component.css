@@ -115,3 +115,62 @@
         font-size: 16px;
     }
 }
+@media only screen and (max-width:375px) {
+    .card{
+        display: block;
+    }
+
+    .detail{
+        padding: 10px;
+        grid-template-rows: 70% 30%;
+    }
+
+    .image img{
+        width: 273px;
+        text-justify: center;
+        /* display: block; */ 
+    }
+    .art-head{
+        padding: 0px;
+    }
+    .art-head p{
+        font-size: 10px;
+    }
+
+    .Author p{
+        font-size: 8px;
+    }
+
+    .Author{
+        margin: 0px;
+    }
+    .image{
+        width:273px
+    }
+
+    .art-head h2{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .image img{
+        width: 293px;
+        text-justify: center;
+    }
+    .art-head h2{
+        font-size: 28px;
+    }
+    .art-head{
+        padding: 0px;
+    }
+    .art-head p{
+        font-size: 10px;
+    }
+    .Author p{
+        font-size: 8px;
+    }
+    .image{
+        width:293px
+    }
+}

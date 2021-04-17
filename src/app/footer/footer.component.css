@@ -43,3 +43,13 @@ li{
         font-size: 10px;
     }
 }
+@media only screen and (width:375px){
+    footer{
+        font-size: 10px;
+    }
+}
+@media only screen and (width:411px){
+    footer{
+        font-size: 14px;
+    }
+}

@@ -1,7 +1,6 @@
-
+<div class="nopost" *ngIf="articles==null && !loadin"><h3>No Article are available</h3></div>
 <div class="exp-container" [ngClass]="loadin? 'bottom':'none'">
   <app-load *ngIf="loadin"></app-load>
-  <div class="nopost" *ngIf="articles==null || articles==[]"><h3>No Post are available</h3></div>
   <div class="exp-row" *ngIf="!loadin">
     <div class="card" *ngFor="let a of articles;let i = index" (click)="getpost(a._id)">
       <div class="art-image">

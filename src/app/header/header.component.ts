@@ -41,6 +41,9 @@ export class HeaderComponent implements OnInit {
   showmenu(){
     this.menu=!this.menu;
   }
+  backdrop(){
+    this.menu=false
+  }
 
   logout(){
     this.showmenu()

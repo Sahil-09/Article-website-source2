@@ -10,12 +10,12 @@ import { PostService } from './post.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  
+  isload=false
   imageval
   name
   editmode=false;
   editid=''
-  constructor(private Authser:AuthService,private postser:PostService,private route:ActivatedRoute) { }
+  constructor(private Authser:AuthService,private postser:PostService,private route:ActivatedRoute,private router:Router) { }
   ArticleForm:FormGroup
   ngOnInit() {
 
@@ -54,6 +54,7 @@ export class DashboardComponent implements OnInit {
   }
 
   onSubmit(form){
+    this.isload=true;
     this.Authser.name.subscribe(data=>{
       this.name=data
     })
@@ -65,7 +66,10 @@ export class DashboardComponent implements OnInit {
       data.append("time",new Date().toLocaleString())
     
     if(!this.editmode){
-      this.postser.createpost(data)
+      this.postser.createpost(data).subscribe((data)=>{
+        this.isload=false;
+        this.router.navigate(["/explore"])
+    })
     }else{
       this.postser.updatepost(data,this.editid)
     }

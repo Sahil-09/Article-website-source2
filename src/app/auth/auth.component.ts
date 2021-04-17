@@ -37,7 +37,11 @@ export class AuthComponent implements OnInit {
       gender:form.value.Gender,
       password:form.value.password
     }
-    this.Authser.Signup(data)
+    this.Authser.Signup(data).subscribe((data)=>{
+      console.log(data)
+      this.Loginswitch=true
+    })
+    
   }
 
   signupswitch(){

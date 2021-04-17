@@ -182,3 +182,43 @@ h2{
     font-size: 14px;
   }
 }
+@media screen and (max-width:375px){
+  .Hero-image{
+    width: 320px;
+  }
+
+  .img-btn{
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+  }
+
+
+  .art-head{
+    display:none;
+  }
+
+  .art-head p{
+    margin-top: 4px;
+  }
+
+  P::first-letter{
+    font-size: 10px;
+  }
+
+  h2{
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width:1400px) {
+  .Hero-image{
+    width: 1000px;
+  }
+
+  .art-head{
+    width: 960px;
+    height: 150px;
+  }
+  
+}

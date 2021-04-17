@@ -1,7 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Router } from "@angular/router";
-import { map, tap } from "rxjs/operators";
+import { tap } from "rxjs/operators";
 
 @Injectable({
     providedIn:'root'
@@ -12,20 +12,18 @@ export class PostService{
     constructor(private http:HttpClient,private router:Router){}
 
     createpost(data){
-        this.http.post('https://articlewebsite.herokuapp.com/api/article/create',data).subscribe((data)=>{
-            this.router.navigate(["/explore"])
-        })
+        return this.http.post('http://articlewebsite.herokuapp.com/api/article/create',data)
     }
 
     updatepost(data,id){
-        this.http.patch("https://articlewebsite.herokuapp.com/api/article/update/"+id,data).subscribe((data)=>{
+        this.http.patch("http://articlewebsite.herokuapp.com/api/article/update/"+id,data).subscribe((data)=>{
             console.log(data)
             this.router.navigate(["/explore"])
         })
     }
 
     getposts(){
-        return this.http.get("https://articlewebsite.herokuapp.com/api/article/get").pipe(tap(data=>{
+        return this.http.get("http://articlewebsite.herokuapp.com/api/article/get").pipe(tap(data=>{
             this.articles=data;
             console.log(this.articles)
         }))
@@ -33,14 +31,14 @@ export class PostService{
 
 
     getpost(i){
-        return this.http.get("https://articlewebsite.herokuapp.com/api/article/get/"+i)
+        return this.http.get("http://articlewebsite.herokuapp.com/api/article/get/"+i)
     }
 
     getmanagepost(){
-        return this.http.get("https://articlewebsite.herokuapp.com/api/article/manage")
+        return this.http.get("http://articlewebsite.herokuapp.com/api/article/manage")
     }
 
     deletepost(id){
-        return this.http.delete("https://articlewebsite.herokuapp.com/api/article/delete/"+id)
+        return this.http.delete("http://articlewebsite.herokuapp.com/api/article/delete/"+id)
     }
 }

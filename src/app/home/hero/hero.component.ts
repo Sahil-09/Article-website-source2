@@ -63,14 +63,14 @@ export class HeroComponent implements OnInit {
       this.lefdisable=false;
     }
     this.count+=1
-    if(this.count<4 && this.count>0){
+    if(this.count<((this.imagepath.length/2)+1) && this.count>0){
       this.imageval=this.imagepath[this.count].image
       this.title=this.imagepath[this.count].title
       this.desc=this.imagepath[this.count].desc
       this.artid=this.imagepath[this.count]._id
       this.imgval.emit(this.imageval)
     }
-    if((this.count+1)>=4){
+    if((this.count+1)>=((this.imagepath.length/2)+1)){
       this.disable=true;
     } 
     console.log(this.count)
@@ -81,7 +81,7 @@ export class HeroComponent implements OnInit {
     if(this.count<=0){
       this.lefdisable=true;
     } 
-    if(this.count<=4&& this.count>=0){
+    if(this.count<=((this.imagepath.length/2)+1) && this.count>=0){
       this.imageval=this.imagepath[this.count].image
       this.title=this.imagepath[this.count].title
       this.desc=this.imagepath[this.count].desc

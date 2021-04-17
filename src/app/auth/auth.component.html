@@ -1,5 +1,6 @@
 <br>
 
+<!-- /////////////////////////////////LOGIN//////////////////////////////////////////// -->
 
 <div class="form-container" *ngIf="Loginswitch">
     <div class="form-row">
@@ -9,14 +10,15 @@
             <h2>Welcome to Blog-website</h2>
             <p>Please login here</p>
         </div>
-        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your mail" ngModel=#email ngModel>
-        <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password" ngModel=#password ngModel><br>
-        <button class="btn" type="submit">Login</button> | Not a member? <a class="signup-link" (click)="signupswitch()">Sigup here</a>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your mail*" ngModel required>
+        <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password*" ngModel required><br>
+        <button class="btn" type="submit" [disabled]="!form.valid">Login</button> | Not a member? <a class="signup-link" (click)="signupswitch()">Sigup here</a>
     </form>
     </div>
 </div>
 
 
+<!-- /////////////////////////////////SIGNUP//////////////////////////////////////////// -->
 
 <div class="form-container" *ngIf="!Loginswitch">
     <div class="form-row">   
@@ -31,11 +33,11 @@
         name="name" 
         id="name"
         class="form-control signup" 
-        placeholder="Enter your Full-name" 
-        ngModel=#email ngModel>
+        placeholder="Enter your Full-name*" 
+        ngModel required>
 
         <div class="form-gender">
-            <span>&nbsp;Please select you gender </span><br>
+            <span>&nbsp;Please select you gender*</span><br>
         <label for="Gender">
         <input 
         type="radio" 
@@ -43,7 +45,7 @@
         id="male" 
         value="Male" 
         placeholder="Enter your email" 
-        ngModel=#radio ngModel>Male</label>
+        ngModel required>Male</label>
 
         <label for="Gender">
         <input 
@@ -52,7 +54,7 @@
         id="female" 
         value="Female" 
         placeholder="Enter your email" 
-        ngModel=#radio ngModel>Female</label>
+        ngModel required>Female</label>
         </div><br>
 
         <input 
@@ -60,25 +62,28 @@
         name="email" 
         id="email" 
         class="form-control signup" 
-        placeholder="Enter your mail" 
-        ngModel=#email ngModel>
+        placeholder="Enter your Email*" 
+        ngModel required>
 
         <input 
         type="password" 
         name="password" 
         id="password" 
         class="form-control signup" 
-        placeholder="Enter your password" 
-        ngModel=#password ngModel>
-
+        placeholder="Enter your password*" 
+        #password="ngModel"
+        ngModel required>
+        <p class=error *ngIf="form.value.password !== form.value.cpassword && cpassword.touched">Password doesn't match</p>
         <input type="password" 
-        name="password" 
+        name="cpassword" 
         id="cpassword" 
         class="form-control signup" 
         placeholder="Confirm your password" 
-        ngModel=#password ngModel><br>
+        #cpassword="ngModel"
+        ngModel required><br>
 
-        <button class="btn" type="submit">Signup</button> 
+
+        <button class="btn" type="submit" [disabled]="!form.valid || form.value.password !== form.value.cpassword">Signup</button> 
         | Already a member? 
         <a class="signup-link" (click)="LoginSwitch()">Login here</a>
 

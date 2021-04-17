@@ -31,6 +31,10 @@ form{
     margin-bottom: 80px;
 }
 
+.error{
+    color:red;
+}
+
 .btn{
     cursor: pointer;
     background: crimson;
@@ -42,6 +46,11 @@ form{
     text-align: center;
     font-size: 16px;
     color: rgb(212, 212, 212);
+}
+
+.btn:disabled{
+    cursor:not-allowed !important;
+    background: rgb(247, 52, 91) !important;
 }
 
 .signup-link{

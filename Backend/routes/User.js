@@ -13,6 +13,7 @@ router.post("/signup", (req, res) => {
         gender: req.body.gender,
       });
       user.save().then(() => {
+        res.status(201).json({message:"User created"});
         console.log("Saved!");
       });
     });

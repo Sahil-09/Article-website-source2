@@ -15,7 +15,9 @@ export class ExploreComponent implements OnInit {
   ngOnInit() {
     this.postser.getposts().subscribe(data=>{
       this.loadin=false
-      this.articles=this.postser.articles.reverse()
+      if(this.postser.articles.length>0){
+        this.articles=this.postser.articles.reverse()
+      }
       console.log(this.articles)
     }) 
   }

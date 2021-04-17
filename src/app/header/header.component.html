@@ -34,9 +34,9 @@
     </ul>
   </div>
 </div>
+<div class="BCKDRP" *ngIf="menu" (click)="backdrop()"></div>
 
-
-<div class="btn-container" routerLink="Dash" routerLinkActive='hide' *ngIf="Username">
+<div class="btn-container" routerLink="Dash" routerLinkActive='hide' *ngIf="Username" (click)="backdrop()">
     <p>+</p>
 </div>
 

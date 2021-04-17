@@ -12,6 +12,7 @@ export class ManagePostComponent implements OnInit {
 
   constructor(private postser:PostService,private router:Router) { }
   articles=[]
+  loadin=true
   ngOnInit(){
     let a=window.scrollX
     console.log(a)
@@ -22,6 +23,7 @@ export class ManagePostComponent implements OnInit {
       }
       return array
     })).subscribe(data=>{
+      this.loadin=false
       this.articles=data.reverse()
     })
   }

@@ -12,6 +12,36 @@
     color: rgb(219, 219, 219);
 }
 
+.backdrop{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.466);
+    backdrop-filter: blur(8px);
+    top:0
+}
+
+app-load{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    position:fixed;
+   vertical-align: middle;
+}
+
+.loading{
+    display: none;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.load{
+   display: block;
+    opacity: 1;
+}
+
+
 form h1{
     font-size: 45px;
     font-weight: 400;
@@ -32,6 +62,17 @@ form h1::after{
 .form-control:focus{
     border-color: crimson
 }
+
+.error{
+    color:red;
+}
+.btn:disabled{
+    background: rgb(14, 101, 172) !important;
+    color: rgb(170, 170, 170);
+    cursor:not-allowed;
+}
+
+
 
 .btn{
     cursor: pointer;
@@ -81,6 +122,17 @@ form{
 
 .form-row{
     width: 41%;
+    animation: onload 1s ease-in-out 1;
+}
+@keyframes onload {
+    0%{
+        transform: translateY(80px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 
 input:-webkit-autofill{
@@ -141,8 +193,10 @@ input:-webkit-autofill{
     }
 
     .form-row{
-        width:100%
+        width:100%;
     }
+
+    
 
     form{
         padding: 20px;
