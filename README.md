@@ -4,10 +4,10 @@ This project is based on MEAN technology i.e. MongoDB, ExpressJS, Angular & Node
 
 ## Features
 
-Signup\n
-Login\n
-Add article\n
-Edit article\n
-Delete article\n
-View articles\n
+Signup
+Login
+Add article
+Edit article
+Delete article
+View articles
 
