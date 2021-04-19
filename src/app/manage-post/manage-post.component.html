@@ -1,32 +1,34 @@
-
 <div class="manage-container">
-    <div class="manage-row">
-        <h2 style="text-align: center;">Manage you post</h2>
-        <app-load *ngIf="loadin"></app-load>
-        <div *ngFor="let a of articles; let i=index" class="container">
-        <div class="article" *ngIf=!loadin>
-            <div class="image">
-                <img [src]="a.image" alt="">
-            </div>
-            <div class="details">
-            <div class="title">
-                <h2 editable>{{a.title}}</h2>
-            </div>
-            <div class="desc">
-                <p>{{a.desc}}</p>
-            </div>
-            <div class="manage-container">
-                <div class="manage-btn">
-                <div class="btn-edit" (click)="edit(a.title,a.desc,a.image,a._id)">
-                    <img src="../assets/edit.svg" alt="img" class="editicon">
-                </div>
-                <div class="btn-delete" (click)="delete(a._id,i)">
-                    <img src="../assets/delete.svg" alt="img" class="editicon">
-                </div>
-                </div>
-            </div>
+  <div class="manage-row">
+    <h2 style="text-align: center">Manage you post</h2>
+    <app-load *ngIf="loadin"></app-load>
+    <div *ngFor="let a of articles; let i = index" class="container">
+      <div class="article" *ngIf="!loadin">
+        <div class="image">
+          <img [src]="a.image" alt="" />
         </div>
+        <div class="details">
+          <div class="title">
+            <h2 editable>{{ a.title }}</h2>
+          </div>
+          <div class="desc">
+            <p>{{ a.desc }}</p>
+          </div>
+          <div class="manage-container">
+            <div class="manage-btn">
+              <div
+                class="btn-edit"
+                (click)="edit(a.title, a.desc, a.image, a._id)"
+              >
+                <img src="../assets/edit.svg" alt="img" class="editicon" />
+              </div>
+              <div class="btn-delete" (click)="delete(a._id, i)">
+                <img src="../assets/delete.svg" alt="img" class="editicon" />
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    </div>
+  </div>
 </div>
