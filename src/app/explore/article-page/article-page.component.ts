@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PostService } from '../dashboard/post.service';
+import { PostService } from 'src/app/manage-post/dashboard/post.service'
 
 @Component({
   selector: 'app-article-page',
@@ -15,7 +15,6 @@ export class ArticlePageComponent implements OnInit {
     const id=this.route.snapshot.params['id']
     this.postser.getpost(id).subscribe(data=>{
       this.Article.push(data)
-      console.log(this.Article)
     })
   }
 

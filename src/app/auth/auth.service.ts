@@ -17,11 +17,11 @@ export class AuthService{
     constructor(private http:HttpClient,private router:Router){}
 
     Signup(data:User){
-       return this.http.post("http://articlewebsite.herokuapp.com/user/signup",data)
+       return this.http.post("http://localhost:3000/user/signup",data)
     }
 
     Login(data:User){
-        this.http.post<{token:string,name:string}>("http://articlewebsite.herokuapp.com/api/user/login",data).subscribe(data=>{
+        this.http.post<{token:string,name:string}>("http://localhost:3000/api/user/login",data).subscribe(data=>{
             
             if(data.token){
                 this.token.next(data.token);

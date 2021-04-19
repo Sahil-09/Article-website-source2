@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AuthService } from '../auth/auth.service';
+import { AuthService } from '../../auth/auth.service';
 import { PostService } from './post.service';
 
 @Component({
@@ -24,13 +24,13 @@ export class DashboardComponent implements OnInit {
       image:new FormControl(null),
       desc:new FormControl(null)
     })
-
+    this.route.params.subscribe(()=>{
     let edittitle=this.route.snapshot.params['title']
     let editdesc=this.route.snapshot.params['desc']
     let editimage=this.route.snapshot.params['image']
     let id=this.route.snapshot.params['id']
     if(edittitle){
-      this.editmode=true
+      this.editmode=true;
       this.ArticleForm.patchValue({
         title:edittitle,
         desc:editdesc,
@@ -38,8 +38,9 @@ export class DashboardComponent implements OnInit {
       })
       this.editid=id
       this.imageval=editimage
-      console.log(editimage)
     }
+    })
+    
     
   }
   
@@ -68,7 +69,7 @@ export class DashboardComponent implements OnInit {
     if(!this.editmode){
       this.postser.createpost(data).subscribe((data)=>{
         this.isload=false;
-        this.router.navigate(["/explore"])
+        this.router.navigate(["/explore/page"])
     })
     }else{
       this.postser.updatepost(data,this.editid)

@@ -202,3 +202,9 @@ input:-webkit-autofill{
         padding: 20px;
     }
 }
+
+@media screen and (max-width:1400px) {
+    form img{
+        width: 400px !important;
+    }
+}

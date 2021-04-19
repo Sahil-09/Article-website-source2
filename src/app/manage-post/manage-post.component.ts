@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { map, retry } from 'rxjs/operators';
-import { PostService } from '../dashboard/post.service';
+import { PostService } from './dashboard/post.service';
 
 @Component({
   selector: 'app-manage-post',
@@ -14,8 +14,6 @@ export class ManagePostComponent implements OnInit {
   articles=[]
   loadin=true
   ngOnInit(){
-    let a=window.scrollX
-    console.log(a)
     this.postser.getmanagepost().pipe(map(res=>{
       const array=[];
       for(const key in res){

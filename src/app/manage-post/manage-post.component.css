@@ -130,3 +130,16 @@ display: -webkit-box;
         height: 30px;
     }
 }
+
+@media screen and (max-width:1400px) {
+
+    .article{
+        width: 75%;
+    }
+
+    .image img{
+        width: 500px;
+    }
+
+    
+}

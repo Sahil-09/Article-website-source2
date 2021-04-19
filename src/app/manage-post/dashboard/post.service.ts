@@ -1,0 +1,42 @@
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { Router } from "@angular/router";
+import { tap } from "rxjs/operators";
+
+@Injectable({
+    providedIn:'root'
+})
+
+export class PostService{
+    articles
+    constructor(private http:HttpClient,private router:Router){}
+
+    createpost(data){
+        return this.http.post('http://localhost:3000/api/article/create',data)
+    }
+
+    updatepost(data,id){
+        this.http.patch("http://localhost:3000/api/article/update/"+id,data).subscribe((data)=>{
+            this.router.navigate(["/explore/page"])
+        })
+    }
+
+    getposts(){
+        return this.http.get("http://localhost:3000/api/article/get").pipe(tap(data=>{
+            this.articles=data;
+        }))
+    }
+
+
+    getpost(i){
+        return this.http.get("http://localhost:3000/api/article/get/"+i)
+    }
+
+    getmanagepost(){
+        return this.http.get("http://localhost:3000/api/article/manage")
+    }
+
+    deletepost(id){
+        return this.http.delete("http://localhost:3000/api/article/delete/"+id)
+    }
+}

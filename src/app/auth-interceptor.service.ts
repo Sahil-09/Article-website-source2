@@ -18,13 +18,11 @@ export class AuthInterceptor implements HttpInterceptor{
             this.Authser.token.subscribe(tok=>{
                 token=tok;
             })
-            console.log(token)
                 if(token){
                     const modreq=req.clone({
                         headers:new HttpHeaders().set('auth',token)
                     })
                     return next.handle(modreq)
-                    console.log(modreq)
                 }
                  return next.handle(req)  
             }

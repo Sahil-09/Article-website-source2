@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { PostService } from 'src/app/dashboard/post.service';
+import { PostService } from 'src/app/manage-post/dashboard/post.service';
 
 @Component({
   selector: 'app-feed',
@@ -16,7 +16,6 @@ loadin=true
     this.postser.getposts().subscribe(data=>{
       this.article=this.postser.articles.reverse().slice(0,3)
       this.loadin=false
-      console.log(this.article)
     })
   }
 

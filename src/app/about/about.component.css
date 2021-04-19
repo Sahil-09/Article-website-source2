@@ -1,0 +1,9 @@
+.Logo{
+    width: 200px;
+}
+
+.logo-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}

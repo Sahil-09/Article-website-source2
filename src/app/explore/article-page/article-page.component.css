@@ -47,3 +47,9 @@
         font-size: 30px;
     }
 }
+
+@media screen and (max-width:1400px) {
+    .Article-image img{
+        width:1080px;
+    }
+}

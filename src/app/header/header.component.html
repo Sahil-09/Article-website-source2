@@ -13,7 +13,7 @@
     routerLink="/" routerLinkActive='active'
     [routerLinkActiveOptions]="{exact:true}"
     >Home</li>
-    <li class="nav-link" routerLink="explore" routerLinkActive='active'>Explore</li>
+    <li class="nav-link" routerLink="explore/page" routerLinkActive='active'>Explore</li>
     <li class="nav-link" routerLink="about" routerLinkActive='active'>About</li>
     <li class="nav-link" routerLink="Auth" routerLinkActive='active' *ngIf="!islogin">Login</li>
     <li class="nav-link" *ngIf="islogin" (click)="showmenu()">{{Username}}</li>

@@ -16,8 +16,6 @@ export class HeaderComponent implements OnInit {
   hide=true;
   Username;
   ngOnInit() {
-
-    console.log(window.pageYOffset)
     this.Authser.token.subscribe(data=>{
       if(data){
        return this.islogin=true;
