@@ -4,11 +4,9 @@ This project is based on MEAN technology i.e. MongoDB, ExpressJS, Angular & Node
 
 ## Features
 
-Signup
-Login
-Add article
-Edit article
-Delete article
-View articles
-nice
-
+### Signup
+### Login
+### Add article
+### Edit article
+### Delete article
+### View articles
