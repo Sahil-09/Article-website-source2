@@ -12,10 +12,10 @@ import { DashboardComponent } from './manage-post/dashboard/dashboard.component'
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { AuthComponent } from './auth/auth.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './Shared/footer/footer.component';
 import{AuthInterceptor} from './auth-interceptor.service';
 import { ManagePostComponent } from './manage-post/manage-post.component';
-import {LoadingComponent} from "./Loading/loading.component";
+import {LoadingComponent} from "./Shared/Loading/loading.component";
 
 
 @NgModule({
