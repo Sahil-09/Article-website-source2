@@ -2,7 +2,7 @@
 <div class="divider"></div>
 <br />
 
-<div class="container" *ngFor="let a of article">
+<div class="container" *ngFor="let a of article" data-aos="fade-up">
   <app-load *ngIf="loadin"></app-load>
   <div class="card" (click)="Article(a._id)" *ngIf="!loadin">
     <div class="image">

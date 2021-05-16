@@ -20,7 +20,7 @@ loadin=true
   }
 
   Article(id){
-    this.router.navigate(['/article',id])
+    this.router.navigate(['explore/article',id])
   }
 
 }

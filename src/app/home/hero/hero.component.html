@@ -4,7 +4,7 @@
   <div class="img-btn left" *ngIf="!loadin" style="transform: translateX(20px)" (click)=prev() [ngClass]="lefdisable?'disable':'none'"><</div>
   <div class="main-cont" (click)="Article()" *ngIf="!loadin">
     <img [src]="imageval" alt="" class="Hero-image"/>
-    <div class="art-head">
+    <div class="art-head" data-aos="fade-up">
       <h2 style="text-align: center;">{{title}}</h2>
       <p>
         {{desc}}

@@ -7,6 +7,8 @@ import { tap } from "rxjs/operators";
     providedIn:'root'
 })
 
+// http://articlewebsite.herokuapp.com/ http://localhost:3000/
+
 export class PostService{
     articles
     constructor(private http:HttpClient,private router:Router){}
